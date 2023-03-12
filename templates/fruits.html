@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <title>Dojo Fruit Store</title>
+  </head>
+  <body>
+    <!-- HEADER SECTION-->
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <strong>Dojo Fruit Store</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN SECTION  -->
+    <main role="name">
+      <!-- JUMBOTRON SECTION-->
+      <section class="jumbotron text-center">
+        <div>
+          <h1>Dojo Fruits</h1>
+          <img
+            style="height: 100px"
+            class="img-thumbnail"
+            src="{{ url_for ('static', filename='img/apple.png') }}"
+          />
+          <img
+            style="height: 100px"
+            class="img-thumbnail"
+            src="{{ url_for ('static', filename='img/blackberry.png') }}"
+          />
+          <img
+            style="height: 100px"
+            class="img-thumbnail"
+            src="{{ url_for ('static', filename='img/raspberry.png') }}"
+          />
+          <img
+            style="height: 100px"
+            class="img-thumbnail"
+            src="{{ url_for ('static', filename='img/strawberry.png') }}"
+          />
+        </div>
+        <p>
+          <a href="/" class="btn btn-warning my-3">Go back</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

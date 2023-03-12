@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS (local) -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+
+    <title>Dojos Fruit</title>
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <strong>Dojo Fruit Store</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main role="main">
+      <!-- Jumbotron Section -->
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Dojo Fruit Store!</h1>
+          <p class="lead text-muted">
+            Your dojo decided to buy fruits for all the students! Please use
+            this app to tell us what you would like to have! Once we get your
+            order, we'll charge your student account automatically.
+          </p>
+          <p>
+            <a href="#buy" class="btn btn-primary my-2"
+              >Order fruits from the store</a
+            >
+            <a href="/fruits" class="btn btn-secondary my-2">See Fruits</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Form Information -->
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <!--definition method POST-->
+          <form action="/checkout" method="post">
+            <!-- Fruits Selection -->
+            <h4 class="mb-3" id="buy">What would you like to buy?</h4>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Fruit Name</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Strawberry</td>
+                  <td>
+                    <select name="strawberry">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Raspberry</td>
+                  <td>
+                    <select name="raspberry">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Apple</td>
+                  <td>
+                    <select name="apple">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- 2.2.2) Personal Information -->
+            <h4 class="mb-3" id="info">Your Information</h4>
+            <div class="row">
+              <!-- First Name -->
+              <div class="col-md-6 mb-3">
+                <label for="firstName">First name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="first_name"
+                  placeholder=""
+                />
+              </div>
+              <!-- Last Name -->
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="last_name"
+                  placeholder=""
+                />
+              </div>
+            </div>
+
+            <!-- Student ID -->
+            <div class="mb-3">
+              <label for="studentId">
+                Your Student ID
+                <span class="text-muted">(Optional)</span>
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                name="student_id"
+                placeholder=""
+              />
+            </div>
+            <!-- Submit -->
+            <hr class="mb-4" />
+            <button class="btn btn-primary btn-lg btn-block" type="submit">
+              Buy me stuff!
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
